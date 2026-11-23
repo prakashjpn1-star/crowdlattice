@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/prakashjpn1-star/crowdlattice/schemas/room.schema.json",
+  "title": "Draft room configuration",
+  "type": "object",
+  "properties": {
+    "roomId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "configVersion": {
+      "const": 1
+    },
+    "replayMaxEvents": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "replayMaxAgeSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "required": [
+    "roomId",
+    "name",
+    "configVersion",
+    "replayMaxEvents",
+    "replayMaxAgeSeconds"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/prakashjpn1-star/crowdlattice/schemas/room-control.schema.json",
+  "title": "Room start or end request",
+  "type": "object",
+  "properties": {
+    "expectedRevision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    }
+  },
+  "required": [
+    "expectedRevision"
+  ],
+  "additionalProperties": false
+}

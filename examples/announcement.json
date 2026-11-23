@@ -1,0 +1,7 @@
+{
+  "type": "announcement",
+  "schemaVersion": 1,
+  "payload": {
+    "text": "The fictional match resumes in five minutes."
+  }
+}

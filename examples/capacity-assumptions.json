@@ -1,0 +1,10 @@
+{
+  "population": 5000000,
+  "updateBytes": 256,
+  "updatesPerSecond": 1,
+  "connectionStateBytes": 16384,
+  "reconnectFraction": 0.2,
+  "reconnectWindowSeconds": 30,
+  "usableFraction": 0.6,
+  "failureReserveNodes": 1
+}

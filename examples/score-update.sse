@@ -1,0 +1,4 @@
+id: room-generation-demo:42
+event: application
+data: {"roomGeneration":"room-generation-demo","sequence":42,"type":"score-set","payload":{"home":2,"away":1}}
+

@@ -1,0 +1,8 @@
+{
+  "type": "score-set",
+  "schemaVersion": 1,
+  "payload": {
+    "home": 2,
+    "away": 1
+  }
+}

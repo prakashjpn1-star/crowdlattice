@@ -1,0 +1,6 @@
+{
+  "type": "RESET_REQUIRED",
+  "roomGeneration": "room-generation-demo",
+  "snapshotSequence": 100,
+  "reason": "The requested prefix is outside the retained replay window."
+}

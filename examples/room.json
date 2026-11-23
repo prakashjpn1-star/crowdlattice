@@ -1,0 +1,7 @@
+{
+  "roomId": "championship-demo",
+  "name": "Fictional championship",
+  "configVersion": 1,
+  "replayMaxEvents": 10000,
+  "replayMaxAgeSeconds": 600
+}

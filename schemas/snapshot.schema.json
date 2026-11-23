@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/prakashjpn1-star/crowdlattice/schemas/snapshot.schema.json",
+  "title": "Consistent room snapshot",
+  "type": "object",
+  "properties": {
+    "roomGeneration": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "home": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "away": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "announcements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2048
+          },
+          "minItems": 0,
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "home",
+        "away",
+        "status",
+        "announcements"
+      ],
+      "additionalProperties": false
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "roomGeneration",
+    "sequence",
+    "state",
+    "digest"
+  ],
+  "additionalProperties": false
+}

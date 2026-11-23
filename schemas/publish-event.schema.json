@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/prakashjpn1-star/crowdlattice/schemas/publish-event.schema.json",
+  "title": "Registered publisher application event",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "score-set"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "home": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "away": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            }
+          },
+          "required": [
+            "home",
+            "away"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "schemaVersion",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "status-set"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "SCHEDULED",
+                "IN_PROGRESS",
+                "INTERMISSION",
+                "FINAL"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "schemaVersion",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "announcement"
+        },
+        "schemaVersion": {
+          "const": 1
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "schemaVersion",
+        "payload"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
